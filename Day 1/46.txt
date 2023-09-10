@@ -1,0 +1,18 @@
+Link: https://leetcode.com/problems/permutations/
+
+Question: 
+
+Given an array nums of distinct integers, return all the possible permutations. 
+You can return the answer in any order.
+
+Approach for Generating Permutations using DFS:
+
+Initialize an empty list to store permutations.
+Use a DFS function with state, current permutation, and permutations list.
+In the DFS function, check for the base case (empty state).
+Iterate through elements, choose one at a time, and explore recursively.
+Backtrack by removing the chosen element.
+Return the list of permutations.
+Example:
+Input: [1, 2, 3]
+Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
