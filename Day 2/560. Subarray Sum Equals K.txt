@@ -1,0 +1,26 @@
+Link - https://leetcode.com/problems/subarray-sum-equals-k/
+
+Question - 
+
+Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
+
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+Example 1:
+
+Input: nums = [1,1,1], k = 2
+Output: 2
+
+Approach -->
+
+1. Initialize a dictionary d with {0: 1} to keep track of running sums and their frequencies.
+
+2. Initialize prefix_sum and result to 0.
+
+3. Iterate through nums, updating prefix_sum.
+
+4. Check if prefix_sum - k is in d. If yes, increment result.
+
+5. Update d[prefix_sum] and continue iterating.
+
+6. Return result as the total count of subarrays with sum k.
