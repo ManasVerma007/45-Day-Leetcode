@@ -1,0 +1,23 @@
+Link - https://leetcode.com/problems/minimum-size-subarray-sum/
+
+Question ->
+
+Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+
+Example 1:
+
+Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2
+Explanation: The subarray [4,3] has the minimal length under the problem constraint.
+
+
+Approach:
+
+1. Initialize sliding_sum, left, and result.
+2. Iterate through the array using a for loop:
+3. Add nums[i] to sliding_sum.
+4. While sliding_sum is greater than or equal to the target sum:
+5. Calculate the current subarray length as i - left + 1.
+6. Update result with the minimum of result and the current subarray length.
+7. Subtract nums[left] from sliding_sum and increment left.
+8. After the loop, if result is still the initialized large value, return 0, otherwise return result

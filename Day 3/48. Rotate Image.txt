@@ -1,0 +1,14 @@
+Link - https://leetcode.com/problems/rotate-image/
+
+Question ->
+You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+
+You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+
+
+Approach:
+
+1.Transpose the Matrix: Swap elements along the main diagonal to transpose the matrix. This means exchanging elements at positions (i, j) and (j, i) for all i and j.
+
+2. Swap Columns: After transposing, swap the columns by pairing the leftmost and rightmost columns, then the next pair of columns, and so on, until you reach the center of the matrix. This step completes the 90-degree clockwise rotation.
+
