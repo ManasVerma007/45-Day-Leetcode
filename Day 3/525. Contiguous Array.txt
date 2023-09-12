@@ -1,0 +1,23 @@
+Link - https://leetcode.com/problems/contiguous-array/
+
+problem -->
+Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
+
+Example 1:
+
+Input: nums = [0,1]
+Output: 2
+Explanation: [0, 1] is the longest contiguous subarray with an equal number of 0 and 1.
+
+
+Approach:
+
+Initialize a dictionary (hashmap) to store the cumulative count and its corresponding index.
+Initialize variables max_length and count.
+Iterate through the binary array (nums).
+For each element:
+Update count based on whether the element is 0 or 1.
+If count becomes zero, update max_length to the current index + 1.
+Store count in hashmap with its index if not already present.
+If count is already in hashmap, calculate the subarray length and update max_length if needed.
+After iterating through nums, max_length contains the maximum length of a subarray with an equal number of 0s and 1s. Return max_length as the result
