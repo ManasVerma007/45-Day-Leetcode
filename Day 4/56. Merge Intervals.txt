@@ -1,0 +1,14 @@
+Link - https://leetcode.com/problems/merge-intervals/
+
+Problem -
+Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+
+Approach -
+
+Empty Input Check: Check if the input list A is empty; if so, return an empty list.
+
+Sort Input: Sort the list A based on interval start values.
+
+Merge Intervals: Iterate through sorted intervals and merge overlapping ones.
+
+Return Result: Return the list of merged intervals as the result.
