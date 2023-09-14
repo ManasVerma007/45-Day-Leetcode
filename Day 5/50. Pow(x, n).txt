@@ -1,0 +1,29 @@
+Link - https://leetcode.com/problems/powx-n/
+
+Problem - 
+Implement pow(x, n), which calculates x raised to the power n (i.e., x^n).
+Example 1:
+
+Input: x = 2.00000, n = 10
+Output: 1024.00000
+Example 2:
+
+Input: x = 2.10000, n = 3
+Output: 9.26100
+
+
+Approach -
+
+Recursive Power Function (power):
+
+Define a recursive function that calculates x^exp, optimizing for even/odd exponents.
+Base case: If exp is 0, return 1.
+If exp is even, square the base and halve the exponent before the recursive call.
+If exp is odd, calculate x * power(x^2, (exp-1)//2).
+Calculate Result:
+
+Call power to compute x^abs(n) and store it in f.
+Handle Sign of Exponent:
+
+If n is non-negative, return float(f).
+If n is negative, return 1/f.

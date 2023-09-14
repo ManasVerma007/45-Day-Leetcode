@@ -1,0 +1,29 @@
+Link - https://leetcode.com/problems/majority-element-ii/
+
+Problem - Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+
+Example 1:
+
+Input: nums = [3,2,3]
+Output: [3]
+
+
+Approach-
+This problem uses the concept of the previous problem
+
+Initialize variables elem1, elem2, count1, and count2 to track potential majority elements and their counts.
+
+Iterate through the list nums, updating variables based on element occurrences:
+
+If count1 is 0 and the current element i is different from elem2, set elem1 to i and initialize count1 to 1.
+If count2 is 0 and the current element i is different from elem1, set elem2 to i and initialize count2 to 1.
+Increment count1 if i matches elem1.
+Increment count2 if i matches elem2.
+Decrement count1 and count2 if i doesn't match either elem1 or elem2.
+Create an empty list result to store the majority elements.
+
+Check element counts:
+
+If elem1 appears more than ⌊n/3⌋ times in the list, append it to the result list.
+If elem1 is different from elem2, and elem2 appears more than ⌊n/3⌋ times in the list, append it to the result list.
+Return the result list containing the majority elements.

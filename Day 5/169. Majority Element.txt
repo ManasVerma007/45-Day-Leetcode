@@ -1,0 +1,30 @@
+Link - https://leetcode.com/problems/majority-element/
+
+Problem -
+Given an array nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+Example 1:
+
+Input: nums = [3,2,3]
+Output: 3
+
+
+Approach -
+
+Initialize ans and count variables.
+
+Initialize ans to 0 and count to 0.
+Iterate through the list nums.
+
+For each element i in the list:
+Update ans and count.
+
+If count is 0, set ans to i.
+If i matches ans, increment count.
+If i is different from ans, decrement count.
+Return the majority element stored in ans.
+
+After iterating through the list, ans holds the majority element.
+the above process is based solely on the fact there exists a majority element that's it.
