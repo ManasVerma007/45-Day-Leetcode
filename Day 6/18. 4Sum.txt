@@ -1,0 +1,35 @@
+Link - https://leetcode.com/problems/4sum/
+
+Problem -
+
+Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
+
+0 <= a, b, c, d < n
+a, b, c, and d are distinct.
+nums[a] + nums[b] + nums[c] + nums[d] == target
+You may return the answer in any order.
+
+Example 1:
+
+Input: nums = [1,0,-1,0,-2,2], target = 0
+Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
+
+
+
+Approach -
+
+Sort the Input Array: Start by sorting the input array nums in ascending order.
+
+Initialize an Empty Result List: Create an empty list res to store unique quadruplets that sum to the target.
+
+Iterate Over Pairs: Use two nested loops to iterate over pairs of elements in nums. The outer loop iterates through the elements with index i, and the inner loop iterates through elements with index j, starting from i + 1.
+
+Calculate the Difference: Calculate the diff as the difference between the target and the sum of the elements at indices i and j.
+
+Use Two Pointers: Initialize two pointers, start and end, to find pairs of elements in the remaining part of the array that sum to diff.
+
+Find Quadruplets: Inside a while loop, check if nums[start] + nums[end] is less than diff. If so, increment start to consider larger values. If it's greater, decrement end to consider smaller values. If it's equal to diff, add the quadruplet (nums[i], nums[j], nums[start], nums[end]) to the res list.
+
+Continue Searching: Continue this process while start is less than end.
+
+Return Unique Quadruplets: Finally, return the unique quadruplets by converting the res list into a set to remove duplicates.

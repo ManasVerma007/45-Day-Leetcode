@@ -1,0 +1,36 @@
+Link - https://leetcode.com/problems/3sum/
+
+Problem -
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+
+Notice that the solution set must not contain duplicate triplets.
+Example 1:
+
+Input: nums = [-1,0,1,2,-1,-4]
+Output: [[-1,-1,2],[-1,0,1]]
+Explanation: 
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+The distinct triplets are [-1,0,1] and [-1,-1,2].
+Notice that the order of the output and the order of the triplets does not matter.
+
+
+Approach -
+Sort the Input Array: Start by sorting the input array in ascending order.
+
+Iterate Through the Array: Use a loop to go through the sorted array.
+
+Skip Duplicate Elements: Skip duplicate elements by comparing the current element with the previous one (if i > 0).
+
+Use Two Pointers: For each element, employ two pointers (left and right) to find triplets.
+
+Find Triplets: Calculate the sum of the elements at indices i, left, and right. If it's zero, add the triplet to the result. If less than zero, move left rightwards; if greater, move right leftwards.
+
+Handle Duplicate Elements: While moving left or right, skip consecutive duplicates.
+
+Continue Searching: Keep iterating until the pointers meet.
+
+Repeat: Increment i and repeat the process for the next element.
+
+Return the Result: Return the list of unique triplets that sum to zero.
