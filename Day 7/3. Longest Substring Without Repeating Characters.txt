@@ -1,0 +1,15 @@
+Link - https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+Problem - 
+Given a string s, find the length of the longest substring without repeating characters.
+Example 1:
+
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3
+
+Approach -
+
+We have to maintain a dictionary such that it will contain all the new characters in current iteration of the string.
+
+When we see a repeated charcater then we update the length if(max is true) otherwise we simply delete the elements of the dictinary and repeat the process again.
