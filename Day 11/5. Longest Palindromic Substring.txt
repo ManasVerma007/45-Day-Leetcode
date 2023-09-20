@@ -1,0 +1,24 @@
+Link - https://leetcode.com/problems/longest-palindromic-substring/
+
+Problem - Given a string s, return the longest palindromic substring in s.
+
+Example 1:
+
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+Example 2:
+
+Input: s = "cbbd"
+Output: "bb"
+
+Approach - 
+
+Initialize res and reslen to store the longest palindrome and its length.
+
+Iterate through each character in s:
+
+For each character, expand outward to find odd-length and even-length palindromes centered at that character.
+Update res and reslen if a longer palindrome is found.
+Return res as the longest palindromic substring.
+

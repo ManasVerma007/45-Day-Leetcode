@@ -1,0 +1,40 @@
+Link - https://leetcode.com/problems/reverse-words-in-a-string/
+
+Problem - Given an input string s, reverse the order of the words.
+
+A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.
+
+Return a string of the words in reverse order concatenated by a single space.
+
+Note that s may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.
+
+Example 1:
+
+Input: s = "the sky is blue"
+Output: "blue is sky the"
+
+
+
+Approach -
+
+trim leading and trailing whitespace from the input string s.
+
+Reverse the entire string s.
+
+Initialize two empty strings: result to store the reversed words, and t to store the current word being processed.
+
+Initialize a counter sc to keep track of consecutive spaces.
+
+Iterate through each character in the reversed string s.
+
+If the current character is a space:
+
+Increment the sc counter.
+If this is the first space encountered (i.e., sc == 1), reverse the current word t and add it to the result, followed by a space.
+Reset the t to an empty string.
+If the current character is not a space, append it to the current word t and reset the sc counter to 0.
+
+After the loop, check if there's a leftover word in t (the last word in the string), and add it to the result after reversing it.
+
+Finally, return the result, which contains the words of the input string s reversed.
+
