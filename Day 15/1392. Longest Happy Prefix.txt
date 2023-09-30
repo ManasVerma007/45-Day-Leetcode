@@ -1,0 +1,25 @@
+Link - https://leetcode.com/problems/longest-happy-prefix/
+
+
+Problem -
+A string is called a happy prefix if is a non-empty prefix which is also a suffix (excluding itself).
+
+Given a string s, return the longest happy prefix of s. Return an empty string "" if no such prefix exists.
+
+Example 1:
+
+Input: s = "level"
+Output: "l"
+Explanation: s contains 4 prefix excluding itself ("l", "le", "lev", "leve"), and suffix ("l", "el", "vel", "evel"). The largest prefix which is also suffix is given by "l".
+
+
+Approach - 
+
+Initialize n as the length of the string s.
+Set longest_common initially as an empty string.
+Iterate from i = 1 to n - 1.
+Extract prefix and suffix of length i from the beginning and end of s.
+If prefix equals suffix, update longest_common with this common string.
+Continue this loop for all possible lengths.
+After the loop, longest_common holds the desired result. Return it.
+

@@ -1,0 +1,38 @@
+Link - https://leetcode.com/problems/count-and-say/
+
+Problem - 
+
+The count-and-say sequence is a sequence of digit strings defined by the recursive formula:
+
+countAndSay(1) = "1"
+countAndSay(n) is the way you would "say" the digit string from countAndSay(n-1), which is then converted into a different digit string.
+To determine how you "say" a digit string, split it into the minimal number of substrings such that each substring contains exactly one unique digit. Then for each substring, say the number of digits, then say the digit. Finally, concatenate every said digit.
+
+For example, the saying and conversion for digit string "3322251":
+
+Input: n = 4
+Output: "1211"
+Explanation:
+countAndSay(1) = "1"
+countAndSay(2) = say "1" = one 1 = "11"
+countAndSay(3) = say "11" = two 1's = "21"
+countAndSay(4) = say "21" = one 2 + one 1 = "12" + "11" = "1211"
+
+
+Approach -
+
+Define a helper function, newstr(st), that takes a string st as input and returns the count-and-say representation of that string.
+
+Initialize a with the string '1', which is the first term of the sequence.
+
+Use a loop to generate the nth term:
+
+Initialize a as '1'.
+In each iteration, call the newstr function with a as input to get the next term in the sequence.
+Update a with the result of the newstr function.
+Repeat this process for a total of n - 1 iterations (since we've already initialized a with the first term).
+After the loop, a will hold the nth term of the "Count and Say" sequence.
+
+Return the value of a as the result.
+
+The newstr(st) function iterates through the characters of the input string st, counting consecutive identical characters and appending the count and character to the result string whenever a different character is encountered. This is how it generates the count-and-say representation of the input string.
