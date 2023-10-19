@@ -1,0 +1,31 @@
+Link - https://leetcode.com/problems/combinations/
+
+Problem - Given two integers n and k, return all possible combinations of k numbers chosen from the range [1, n].
+
+You may return the answer in any order.
+
+Example 1:
+
+Input: n = 4, k = 2
+Output: [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]
+Explanation: There are 4 choose 2 = 6 total combinations.
+Note that combinations are unordered, i.e., [1,2] and [2,1] are considered to be the same combination.
+
+Solution - 
+
+Create a class Solution with a combine method.
+
+In the combine method, define a nested function backtrack for recursive combination generation.
+
+Initialize an empty list results to store combinations.
+
+In the backtrack function:
+    If the length of the current list is equal to k, append a copy of current to results.
+
+    Iterate from start to n (inclusive), adding each number to current and recursively calling backtrack.
+
+    Remove the last element from current after the recursive call.
+
+Call backtrack with initial values (k, an empty list, and 1 as the start).
+
+Return results containing valid combinations.
